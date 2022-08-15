@@ -12,7 +12,7 @@ list_function = MenuSettings()
 console.print('''[bold]
 GitHub: https://github.com/CrimsonCoalition
 Author's channel: 
-Version: v.0.1.''')
+BadCord Version: v.0.1.''')
 
 
 def botnet_main():
