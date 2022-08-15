@@ -9,7 +9,7 @@ import glob
 console = Console()
 
 menu_sessions_settings = console.input('''[bold white]
-[1] - add account
-[2] - checking accounts for validity
+[1] - Добавить токен.
+[2] - Проверить токены на валидность.
 >> ''')
 
