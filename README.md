@@ -22,7 +22,7 @@ cd CrimsonBotnet
 
 ```bash
 cd accounts
-python add_account.py
+python add_account.py # либо python3 add_account.py если вы сидите с Linux.
 ```
 
 ***После чего вы увидете следующее***
