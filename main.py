@@ -6,7 +6,7 @@ from accounts.settings_account import AccountsRead
 
 console = Console()
 
-accounts_list = AccountsRead()
+account_list = AccountsRead()
 list_function = MenuSettings()
 
 console.print('''[bold]
@@ -30,7 +30,7 @@ def botnet_main():
 
     menu_function={}
 
-    console.print(f'[bold white]Кол-во ботнет аккаунтов: >> {len(accounts_list.accounts)}')
+    console.print(f'[bold white]Кол-во ботнет аккаунтов: >> {len(account_list.accounts)}')
     for num_function, function in enumerate(
             list_function.menu_botnet,
             start=1
@@ -44,7 +44,7 @@ def botnet_main():
 
         for num, classes in menu_function.items():
             if num == menu:
-                classes(session_list.accounts)
+                classes(account_list.accounts)
 
     except KeyboardInterrupt:
         console.print('\n[blue]<https://github.com/CrimsonCoalition>[/]')
