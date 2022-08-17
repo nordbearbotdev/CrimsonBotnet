@@ -1,9 +1,9 @@
 import os
 
-class SessionsRead:
+class AccountsRead:
     def __init__(self):
-        self.sessions = []
-        for session in os.listdir('accounts'):
-            if session[-7:] == 'account':
-                session = open(f'accounts/{session}', 'r')
-                self.sessions.append(session.read())
+        self.accounts = []
+        for account in os.listdir('accounts'):
+            if account[-7:] == 'account':
+                account = open(f'accounts/{account}', 'r')
+                self.accounts.append(account.read())
