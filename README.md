@@ -26,4 +26,5 @@ python add_account.py
 ```
 
 ***После чего вы увидете следующее***
+
 ![Screenshot_33](https://user-images.githubusercontent.com/85753549/185092178-07460436-5b70-491a-8791-83f9d1430f2d.png)
