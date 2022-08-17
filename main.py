@@ -2,7 +2,7 @@ from rich.console import Console
 import sys
 
 from settings.settings import MenuSettings
-from settings.settings_account import SessionsRead
+from accounts.settings_account import AccountsRead
 
 console = Console()
 
@@ -30,7 +30,7 @@ def botnet_main():
 
     menu_function={}
 
-    console.print(f'[bold white]Кол-во ботнет аккаунтов: >> {len(session_list.accounts)}')
+    console.print(f'[bold white]Кол-во ботнет аккаунтов: >> {len(accounts_list.accounts)}')
     for num_function, function in enumerate(
             list_function.menu_botnet,
             start=1
