@@ -2,7 +2,7 @@ from rich.console import Console
 import sys
 
 from settings.settings import MenuSettings
-from settings.settings_session import SessionsRead
+from settings.settings_account import SessionsRead
 
 console = Console()
 
