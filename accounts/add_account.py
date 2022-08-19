@@ -8,7 +8,8 @@ import glob
 
 console = Console()
 
-menu_sessions_settings = console.input('''[bold white]
+menu_sessions_settings = console.input(colored( '''
+
 
 
    _____      _                             _____              
@@ -24,5 +25,7 @@ menu_sessions_settings = console.input('''[bold white]
 
 [1] - Добавить токен.
 [2] - Проверить токены на валидность.
->> ''')
+>> 
+
+''','magenta'))
 
