@@ -1,21 +1,13 @@
 """ Devoloped by Crimson Coalition """
 
-from rich.console import Console
-import sys
+import functions as s
+from functions import color
 
-from settings.settings import MenuSettings
-from accounts.settings_account import AccountsRead
 from colorama import Fore, Style
 from termcolor import colored
 
-console = Console()
 
-account_list = AccountsRead()
-list_function = MenuSettings()
-
-def banner():
-    system("cls" if name == "nt" else "clear")
-    print(colored( '''
+print(colored( '''
 
 
    _____      _                             _____              
@@ -34,31 +26,49 @@ Crimson Discord Botnet Version: v.0.1.
 ''','magenta'))
 
 
-def botnet_main():
+[1] Отправка Запросов В Друзья
+[2] Вход В Конфу
+[3] Выход Из Конфы
+[4] Отправка Сообщений
+[5] Показать Хелп-Лист.
+[6] Выйти
 
-    menu_function={}
 
-    console.print(f'[bold white]Кол-во ботнет аккаунтов: >> {len(account_list.accounts)}')
-    for num_function, function in enumerate(
-            list_function.menu_botnet,
-            start=1
-        ):
+while True:
+	_input = str(input(f"{color.YELLOW}[?] > {color.RESET_ALL}").lower())
 
-        menu_function[num_function]=function
-        console.print(f'[bold white][{num_function}] {function.__doc__}')
+	if _input == "1":
+		userid = input(f"{color.YELLOW}[?] Введите ID Пользователя, Которому Надо Отправить Запрос В Друзья > {color.RESET_ALL}").lower()
+		for tokens in s.tokens():
+			s.friend_request(token = tokens , userid = userid , userAgent = s.userAgent() , proxies = s.proxies())
+		print(f"{color.GREEN}Операция Закончена. {color.RESET_ALL}")
 
-    try:
-        menu = int(console.input('>> '))
+	elif _input == "2":
+		guildid = input(f"{color.YELLOW}[?] Введите ID Сервера, На Который Надо Войти > {color.RESET_ALL}").lower()
+		for tokens in s.tokens():
+			s.join_guild(token = tokens , guildid = guildid , userAgent = s.userAgent() , proxies = s.proxies())
+		print(f"{color.GREEN}Операция Закончена. {color.RESET_ALL}")
 
-        for num, classes in menu_function.items():
-            if num == menu:
-                classes(account_list.accounts)
 
-    except KeyboardInterrupt:
-        console.print('\n[blue]<https://github.com/CrimsonCoalition>[/]')
-        sys.exit()
+	elif _input == "3":
+		guildid = input(f"{color.YELLOW}[?] Введите ID Сервера, С Которого Надо Выйти > {color.RESET_ALL}").lower()
+		for tokens in s.tokens():
+			s.leave_guild(token = tokens , guildid=guildid , userAgent=s.userAgent() , proxies=s.proxies())
+		print(f"{color.GREEN}Операция Закончена. {color.RESET_ALL}")
 
-    except:
-        botnet_main()
 
-botnet_main()
+	elif _input == "4":
+		channelid = input(f"{color.YELLOW}[?] Введите ID Канала, На который Надо Отпрвавить Сообщение > {color.RESET_ALL}").lower()
+		message = input(f"{color.YELLOW}[?] Введите Сообщение > {color.RESET_ALL}").lower()
+		for tokens in s.tokens():
+			s.send_message(token = tokens , channelid = channelid , message = message , userAgent = s.userAgent() , proxies=s.proxies())
+		print(f"{color.GREEN}Операция Закончена. {color.RESET_ALL}")
+
+	elif _input == "5":
+		print("Поместите Токены по пути ./files/tokens.txt file.")
+
+	elif _input == "6":
+		quit()
+
+	else:
+		print(f"{color.RED}[-]Неправильная опция. {color.RESET_ALL}")
