@@ -5,6 +5,7 @@ import sys
 
 from settings.settings import MenuSettings
 from accounts.settings_account import AccountsRead
+from colorama import Fore, Style
 from termcolor import colored
 
 console = Console()
