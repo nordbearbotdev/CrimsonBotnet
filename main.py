@@ -18,17 +18,15 @@ GitHub: https://github.com/CrimsonCoalition
 Author's channel: https://t.me/CrimsonCoalition/
 Crimson Discord Botnet Version: v.0.1.
 
+
+[1] Отправка запросов в друзья
+[2] Вход в конфу
+[3] Выход из конфы
+[4] Отправка сообщений
+[5] Показать хелп-лист.
+[6] Выйти
 ''')
 # ''','magenta'))
-
-
-
-1: Friend Request Sender
-2: Guild Joiner
-3: Guild Leaver
-4: Message Sender
-5: Shows the help message.
-6: Exit
 
 
 while True:
