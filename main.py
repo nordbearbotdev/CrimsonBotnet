@@ -23,12 +23,12 @@ Crimson Discord Botnet Version: v.0.1.
 
 
 
-[1] Friend Request Sender
-[2] Guild Joiner
-[3] Guild Leaver
-[4] Message Sender
-[5] Shows the help message.
-[6] Exit
+1: Friend Request Sender
+2: Guild Joiner
+3: Guild Leaver
+4: Message Sender
+5: Shows the help message.
+6: Exit
 
 
 while True:
