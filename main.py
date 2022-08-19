@@ -1,3 +1,5 @@
+""" Devoloped by Crimson Coalition """
+
 from rich.console import Console
 import sys
 
