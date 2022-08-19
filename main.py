@@ -13,7 +13,9 @@ console = Console()
 account_list = AccountsRead()
 list_function = MenuSettings()
 
-console.print('''[bold]
+def banner():
+    system("cls" if name == "nt" else "clear")
+    print(colored( '''
 
 
    _____      _                             _____              
@@ -26,8 +28,10 @@ console.print('''[bold]
                                           Crimson never die. Crimson never down.                     
 
 GitHub: https://github.com/CrimsonCoalition
-Author's channel: 
-BadCord Version: v.0.1.''')
+Author's channel: https://t.me/CrimsonCoalition/
+Crimson Discord Botnet Version: v.0.1.
+
+''','magenta'))
 
 
 def botnet_main():
