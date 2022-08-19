@@ -21,7 +21,8 @@ Crimson Discord Botnet Version: v.0.1.
 [3] Выход из конфы
 [4] Отправка сообщений
 [5] Показать хелп-лист.
-[6] Выйти
+[6] История
+[7] Выйти
 ''')
 # ''','magenta'))
 
@@ -58,8 +59,11 @@ while True:
 
 	elif _input == "5":
 		print("Поместите Токены по пути ./files/tokens.txt file.")
-
+		
 	elif _input == "6":
+		print("")
+
+	elif _input == "7":
 		quit()
 
 	else:
