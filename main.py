@@ -7,7 +7,8 @@ from colorama import Fore, Style
 from termcolor import colored
 
 
-print(colored( '''
+# print(colored( '''
+print('''
 
 
    _____      _                             _____              
@@ -23,7 +24,9 @@ GitHub: https://github.com/CrimsonCoalition
 Author's channel: https://t.me/CrimsonCoalition/
 Crimson Discord Botnet Version: v.0.1.
 
-''','magenta'))
+''')
+# ''','magenta'))
+
 
 
 [1] Отправка запросов в друзья
