@@ -3,9 +3,6 @@
 import functions as s
 from functions import color
 
-from colorama import Fore, Style
-from termcolor import colored
-
 s.banner(text="Crimson Inc.")
 
 # print(colored( '''
