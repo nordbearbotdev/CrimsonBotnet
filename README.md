@@ -23,6 +23,10 @@ git clone https://github.com/CrimsonCoalition/CrimsonBotnet/
 ```bash
 cd CrimsonBotnet
 ```
+***Установите недостающие модули:***
+```bash
+pip install requirements.txt # pip3 если у вас MacOS X или Linux 
+```
 
 ### ***Добавление аккаунтов***
 
